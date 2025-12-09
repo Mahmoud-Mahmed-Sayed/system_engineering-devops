@@ -9,11 +9,11 @@ while [ $COUNT -le 10 ]; do
   
   # 3. Check for the 4th iteration (Bad Luck)
   if [ $COUNT -eq 4 ]; then
-    echo "Bad Luck"
+    echo "bad luck" # Changed to lowercase
     
   # 4. Check for the 8th iteration (Good Luck) - only if the first 'if' was false
   elif [ $COUNT -eq 8 ]; then
-    echo "Good Luck"
+    echo "good luck" # Changed to lowercase
     
   # 5. For all other iterations (Best School)
   else
