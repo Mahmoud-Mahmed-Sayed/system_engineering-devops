@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# This script displays "Best School" 10 times, printing "Hi!" on the 8th iteration.
+
+# 1. Initialize a counter variable
+COUNT=1
+
+# 2. Loop while COUNT is less than or equal to 10
+while [ $COUNT -le 10 ]; do
+  # 3. Check if the current iteration is the 8th one
+  if [ $COUNT -eq 8 ]; then
+    echo "Best School"
+    echo "Hi!"
+  else
+    # For all other iterations (not the 8th)
+    echo "Best School"
+  fi
+  
+  # 4. Increment the counter
+  COUNT=$((COUNT + 1))
+done
