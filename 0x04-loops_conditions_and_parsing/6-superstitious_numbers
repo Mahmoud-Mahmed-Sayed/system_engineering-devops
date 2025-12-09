@@ -9,22 +9,16 @@ while [ $COUNT -le 20 ]; do
   
   # 3. Use the 'case' statement to check for specific numbers
   case $COUNT in
-    4) # Case for the 4th iteration
+    4)
       echo "bad luck from China"
       ;;
-    9) # Case for the 9th iteration
+    9 | 13) # Grouping 9 and 13 as they have the same output
       echo "bad luck from Japan"
       ;;
-    11) # Case for the 11th iteration
+    11 | 17) # Grouping 11 and 17 as they have the same output
       echo "bad luck from Italy"
       ;;
-    13) # Case for the 13th iteration
-      echo "bad luck from Japan"
-      ;;
-    17) # Case for the 17th iteration
-      echo "bad luck from Italy"
-      ;;
-    *) # Default case: runs if none of the above numbers match
+    *) # Default case: print the number itself
       echo "$COUNT"
       ;;
   esac
