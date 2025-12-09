@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # This script is displaying "Best School" 10 times using a for loop.
 
-# The 'for' loop will iterate 10 times.
-# {1..10} is a sequence expression that generates numbers from 1 to 10.
-for i in {1..10}; do
+# We use '_' as the variable name to show it's intentionally unused and
+# avoid the ShellCheck SC2034 warning.
+for _ in {1..10}; do
   echo "Best School"
 done
