@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+# This script displays "Best School" 10 times, customizing the output for iterations 4 and 8.
+
+# 1. Initialize a counter variable
+COUNT=1
+
+# 2. Loop while COUNT is less than or equal to 10
+while [ $COUNT -le 10 ]; do
+  
+  # 3. Check for the 4th iteration (Bad Luck)
+  if [ $COUNT -eq 4 ]; then
+    echo "Bad Luck"
+    
+  # 4. Check for the 8th iteration (Good Luck) - only if the first 'if' was false
+  elif [ $COUNT -eq 8 ]; then
+    echo "Good Luck"
+    
+  # 5. For all other iterations (Best School)
+  else
+    echo "Best School"
+  fi
+  
+  # 6. Increment the counter
+  COUNT=$((COUNT + 1))
+done
