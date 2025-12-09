@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# This script displays "Best School" 10 times using an until loop.
+
+# 1. Initialize a counter variable (start at 1)
+COUNT=1
+
+# 2. Set the 'until' loop condition
+# Loop continues UNTIL the COUNT is Greater Than (-gt) 10.
+# The loop will run for COUNT values 1 through 10.
+until [ $COUNT -gt 10 ]; do
+  # The action to be repeated
+  echo "Best School"
+  
+  # 3. Increment the counter using arithmetic expansion
+  COUNT=$((COUNT + 1))
+done
