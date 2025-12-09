@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
 # This script lists all non-hidden files in the current directory and displays
 # only the part of the name that comes after the first dash (-).
-# This approach processes all non-hidden files in the current directory.
-for file in $(ls -A1); do
+
+# Loop over all non-hidden files/directories using a simple glob (*).
+# This is the standard, robust way to avoid the SC2045 warning.
+for file in *; do
   
   # Parameter expansion removes the shortest match from the start up to the first dash.
-  # This strips the "X-" prefix (e.g., "0-file_0" -> "file_0").
   echo "${file#*-}"
 
 done
