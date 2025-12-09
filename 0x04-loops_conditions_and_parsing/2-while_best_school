@@ -1,6 +1,13 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# This script displays "Best School" 10 times using a while loop.
+
+# 1. Initialize a counter variable (start at 1)
 COUNT=1
+
+# 2. Set the 'while' loop condition (loop as long as COUNT is less than or equal to 10)
 while [ $COUNT -le 10 ]; do
+  # The action to be repeated
   echo "Best School"
+  # 3. Increment the counter (important: use the arithmetic expansion $(( )) for calculation)
   COUNT=$((COUNT + 1))
 done
