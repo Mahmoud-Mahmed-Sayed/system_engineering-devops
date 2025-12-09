@@ -1,16 +1,11 @@
 #!/usr/bin/env bash
 # This script lists all non-hidden files in the current directory and displays
 # only the part of the name that comes after the first dash (-).
+# This approach processes all non-hidden files in the current directory.
+for file in $(ls -A1); do
+  
+  # Parameter expansion removes the shortest match from the start up to the first dash.
+  # This strips the "X-" prefix (e.g., "0-file_0" -> "file_0").
+  echo "${file#*-}"
 
-# The 'for' loop iterates over all non-hidden files/directories in the current path.
-for file in *; do
-  
-  # Check if the file name contains a dash, to ensure we only apply the manipulation
-  # to the files that match the expected naming convention (e.g., "1-file").
-  if [[ "$file" == *-* ]]; then
-    # Use parameter expansion to remove the shortest match from the start up to the first dash.
-    # ${file#*-} means: remove '*' followed by '-' from the beginning of $file.
-    echo "${file#*-}"
-  fi
-  
 done
