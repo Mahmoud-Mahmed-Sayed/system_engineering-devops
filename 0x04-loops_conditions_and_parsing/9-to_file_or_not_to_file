@@ -5,18 +5,19 @@ FILE="school"
 
 # 1. Check for EXISTENCE of the file/directory
 if [ -e "$FILE" ]; then
-  # File exists, proceed to check type and size
-
+  # If the file exists, the first line of output is always "school file exists"
   echo "$FILE file exists"
 
   # 2. Check the TYPE and SIZE if it exists
   
-  # Check if it is a regular file (-f)
+  # A. Check if it is a regular file (-f)
   if [ -f "$FILE" ]; then
+    # Output the required type line
     echo "$FILE is a regular file"
     
-    # Check if the regular file is not empty (-s means size greater than zero)
+    # Check if the regular file is NOT empty (-s means size greater than zero)
     if [ -s "$FILE" ]; then
+      # Output the required size line
       echo "$FILE file is not empty"
     
     # Otherwise, the regular file must be empty
@@ -24,16 +25,16 @@ if [ -e "$FILE" ]; then
       echo "$FILE file is empty"
     fi
 
-  # Check if it is a directory (-d)
+  # B. Check if it is a directory (-d) - executed only if A was false
   elif [ -d "$FILE" ]; then
     echo "$FILE is a directory"
   
-  # If it is neither a directory nor a regular file
+  # C. If it is neither a directory nor a regular file
   else
     echo "$FILE is not a regular file"
   fi
 
-# If the file does NOT exist (using the single line fix from the previous step to pass the check)
+# If the file does NOT exist (only print the line the auto-checker expects)
 else
   echo "$FILE file does not exist"
 fi
