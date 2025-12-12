@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# A Bash script that finds and displays the PID and process name for all running bash processes.
+ps -p $(pgrep bash) -o pid,comm --no-headers
