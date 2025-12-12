@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# A Bash script that finds the PID of the running 4-to_infinity_and_beyond script and terminates it using the kill command.
+# Find the PID and send the SIGTERM signal (default for kill) to terminate the process.
+kill $(pgrep -f 4-to_infinity_and_beyond)
