@@ -1,0 +1,9 @@
+# Set a trap for the SIGTERM signal (signal 15)
+trap 'echo "I am invincible!!"' SIGTERM
+
+# Infinite loop
+while true
+do
+    echo "To infinity and beyond"
+    sleep 1
+done
