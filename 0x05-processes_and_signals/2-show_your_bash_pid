@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# A Bash script that filters running processes to display only the Bash shell processes (excluding grep).
+# shellcheck disable=SC2009
+ps aux | awk '/bash/{print}'
