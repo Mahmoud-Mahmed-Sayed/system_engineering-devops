@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# A Bash script that finds the running 4-to_infinity_and_beyond script and terminates it using the pkill command.
+# The -f flag is used to match the full command line, including the script name.
+pkill -f 4-to_infinity_and_beyond
